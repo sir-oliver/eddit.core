@@ -1,0 +1,127 @@
+/* https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/ */
+
+.vh-100-fix {
+	max-height: stretch;	
+}
+
+:focus {
+	outline-style: initial;
+	outline-color: transparent;
+	outline-width: 0;
+}
+
+.bg-gradient-blue{
+	background: transparent linear-gradient(180deg, #0A2133 0%, #005A94 81%, #0A2133 100%) 0% 0% no-repeat padding-box;
+}
+.bg-gradient-blue-light{
+	background: transparent linear-gradient(180deg, #0F2846 0%, #0F2846 20%, #005A94 62%, #FFFFFF 92%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+}
+
+.bg-gradient-green {
+	background: transparent linear-gradient(135deg, #86BC24 0%, #86BC24 32%, #597B1B 100%) 0% 0% no-repeat padding-box;
+}
+.bg-gradient-lightblue {
+	background: transparent linear-gradient(135deg, #2699D6 0%, #2491CB 43%, #266788 100%) 0% 0% no-repeat padding-box;
+}
+.bg-gradient-purple {
+	background: transparent linear-gradient(135deg, #874589 0%, #874589 36%, #573258 100%) 0% 0% no-repeat padding-box;
+}
+.bg-gradient-orange {
+	background: transparent linear-gradient(135deg, #D07430 0%, #D07430 29%, #84481C 100%) 0% 0% no-repeat padding-box;
+}
+
+
+
+.bg-img{
+	position: absolute;
+	z-index: -1;
+}
+.border-rounded{
+	border-radius: 2.125rem;
+}
+.object-cover{
+	object-fit: cover;
+}
+.object-top-right{
+	object-position: top right;
+}
+.object-top-left{
+	object-position: top left;
+}
+.object-bottom-right{
+	object-position: bottom right;
+}
+.object-bottom-left{
+	object-position: bottom left;
+}
+.z-bg{
+	z-index: -1;
+}
+.square {
+	aspect-ratio: 1 / 1;
+}
+
+.text-shadow {
+	text-shadow: 0 0 10px $black;
+}
+
+
+/* https://www.itsupportguides.com/knowledge-base/tech-tips-tricks/how-to-offset-anchor-tag-link-using-css/ */
+
+:target::before {
+	content:"";
+    display:block;
+	height:100px; /* fixed header height*/
+	margin:-100px 0 0 0; /* negative fixed header height */
+}
+
+.flex-basis-100 {
+	flex-basis:100%
+}
+
+/* BREAKPOINT SPECIFIC HELPERS*/
+@include media-breakpoint-up(md) {
+	.bg-img-md{
+		position: absolute;
+		z-index: -1;
+	}
+	.h-md-100{
+		height:100%;
+	}
+	.object-md-cover{
+		object-fit: cover;
+	}
+	.position-md-static{
+		position: static !important;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.bg-img-lg{
+		position: absolute;
+		z-index: -1;
+	}
+	.h-lg-100{
+		height:100%;
+	}
+	.object-lg-cover{
+		object-fit: cover;
+	}
+	.position-lg-static{
+		position: static !important;
+	}
+}
+@include media-breakpoint-up(xl) {
+	.bg-img-xl{
+		position: absolute;
+		z-index: -1;
+	}
+	.h-xl-100{
+		height:100%;
+	}
+	.object-xl-cover{
+		object-fit: cover;
+	}
+	.position-xl-static{
+		position: static !important;
+	}
+}

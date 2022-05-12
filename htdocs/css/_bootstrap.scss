@@ -1,0 +1,161 @@
+@import "bootstrap/functions";
+
+
+/*
+  alter existing values BEFORE importing variables.scss
+*/
+// $darkestblue:   #0A2133;
+// $darkblue:      #0F2846;
+// $lightblue:     #005A94;
+// $lightgrey:     #D4D8DA;
+// $grey:          #d4d8da;
+// $yellow:        #D6AF22;
+
+// $link-color:    $darkblue;
+// $offcanvas-horizontal-width:  100vw;
+/*
+  BORDER RADIUS
+*/
+// $border-radius:               1.2rem;
+// $border-radius-sm:            0.9rem;
+// $border-radius-lg:            2.188rem;
+// $border-radius-pill:          50rem;
+
+// $btn-border-radius:           1.2rem;
+// $btn-border-radius-sm:        0.9rem;
+// $btn-border-radius-lg:        2.188rem;
+
+// $input-border-radius:         $btn-border-radius;
+// $input-border-radius-sm:      $btn-border-radius-sm;
+// $input-border-radius-lg:      $btn-border-radius-lg;
+
+
+/*
+  FORM OVERRIDES
+*/
+// $form-label-font-weight:       500;
+// $form-select-indicator-color:  #ffffff;
+
+// $input-bg:                     $darkblue;
+// $input-color:                 #ffffff;
+// $input-border-color:          #ffffff;
+// $input-btn-font-size-sm:       0.75rem;
+
+// $input-btn-padding-y:         0.5rem;
+// $input-btn-padding-x:         1.0rem;
+
+// $input-btn-padding-y-sm:      0.25rem;
+// $input-btn-padding-x-sm:      1.0rem;
+
+// $input-btn-padding-y-lg:      0.9rem;
+// $input-btn-padding-x-lg:      1.5rem;
+
+/*
+  BTN OVERRIDES
+*/
+
+// $btn-border-radius:            2.188rem;
+// $btn-padding-y:                .5rem;
+// $btn-padding-x:                1.5rem;
+// $btn-font-size:                1.25rem;
+// $btn-font-weight:              500;
+
+
+@import "bootstrap/variables";
+
+/*
+  BODY OVERRIDES
+*/
+// $body-color:               $white;
+
+/*
+  TYPO OVERRIDES
+*/
+
+// $font-family-base:            Roboto, sans-serif;
+// $line-height-base:            1.5;
+// $font-weight-base:            300;
+// $small-font-size:             .75rem;
+
+$link-decoration:             none;
+
+// $headings-font-weight:        700;
+// $headings-line-height:        1;
+
+// $h1-font-size:                $font-size-base * 3.5;
+// $h2-font-size:                $font-size-base * 2;
+// $h3-font-size:                $font-size-base * 1.5;
+// $h1-font-size:                $font-size-base * 3.273;
+// $h2-font-size:                $font-size-base * 1.909;
+// $h3-font-size:                $font-size-base * 1.636;
+
+
+
+/*
+  when adding a new theme color we need to update some color maps
+*/
+// $theme-colors: map-merge(
+//   $theme-colors,
+//   (
+//     "darkestblue": $darkestblue,
+//     "darkblue": $darkblue,
+//     "lightblue": $lightblue,
+//     "lightgrey": $lightgrey,
+//     "grey": $grey,
+//     "yellow": $yellow
+//   )
+// );
+// $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+// $utilities-colors: $theme-colors-rgb;
+// $utilities-bg: map-merge(
+//   $utilities-colors,
+//   (
+//     "black": to-rgb($black),
+//     "white": to-rgb($white),
+//     "body": to-rgb($body-bg)
+//   )
+// );
+// $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+// $utilities-text: map-merge(
+//   $utilities-colors,
+//   (
+//     "black": to-rgb($black),
+//     "white": to-rgb($white),
+//     "body": to-rgb($body-color)
+//   )
+// );
+// $utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");
+
+
+// SPACERS
+
+$spacers: (
+  0: 0,
+  "0-5": $spacer * 0.5,
+  1: $spacer * 1,
+  "1-5": $spacer * 1.5,
+  2: $spacer * 2,
+  "2-5": $spacer * 2.5,
+  3: $spacer * 3,
+  "3-5": $spacer * 3.5,
+  4: $spacer * 4,
+  "4-5": $spacer * 4.5,
+  5: $spacer * 5,
+  "5-5": $spacer * 5.5,
+  6: $spacer * 6,
+  "6-5": $spacer * 6.5,
+  7: $spacer * 7,
+  "7-5": $spacer * 7.5,
+  8: $spacer * 8,
+  "8-5": $spacer * 8.5,
+  9: $spacer * 9,
+  "9-5": $spacer * 9.5,
+  10: $spacer * 10,
+);
+// $grid-gutter-width: 1.5rem;
+$gutters: $spacers;
+
+
+
+@import "bootstrap/bootstrap";
+

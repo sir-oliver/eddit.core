@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
 
 	<link rel="stylesheet" href="/eddit/css/eddit.css?t={$smarty.now}">
+	{* <link rel="stylesheet" href="/eddit/css/_eddit-static.scss?t={$smarty.now}"> *}
 
 	<script type="text/javascript">
 	var eddit =
