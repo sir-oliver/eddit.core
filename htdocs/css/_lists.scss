@@ -1,0 +1,27 @@
+#lists {
+	.dataTable,
+	.jstree {
+		font-size: 0.8rem;
+	}
+	.toolbar {
+		border-bottom: 1px dotted #797978;
+		* {
+			color: #666;
+			border-color: #e0e0e0;
+			background-color: #e0e0e0;
+		}
+	} 
+	.pathbar {
+		border-bottom: 1px dotted #797978;
+		background-color: #e0e0e0;
+		padding: .25rem .5rem;
+		font-size: 0.875rem;
+	}
+
+	table.dataTable {
+		td:first-child, 
+		th:first-child {
+			padding-left: .6rem;
+		}
+	}
+}

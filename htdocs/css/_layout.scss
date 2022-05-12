@@ -1,0 +1,40 @@
+#nav {
+	background-color: #333;
+	overflow:hidden;
+}
+#lists {
+	background-color: #e0e0e0;
+	overflow:hidden;
+}
+#content {
+	background-color: #ffffff;
+	overflow:hidden;
+
+	#web {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.data {
+	#content #data_wrapper {
+		display: block;
+	}
+	#content #web {
+		display: none;
+	}
+	#nav a[href="#objects"] {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+}
+
+
+.web {
+	#content #data_wrapper {
+		display: none;
+	}
+	#content #web {
+		display: block;
+	}
+}

@@ -11,8 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.bootstrap5.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/staterestore/1.0.1/css/stateRestore.bootstrap5.css"/>
-
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
 
 	<link rel="stylesheet" href="/eddit/css/eddit.css?t={$smarty.now}">
 	{* <link rel="stylesheet" href="/eddit/css/_eddit-static.scss?t={$smarty.now}"> *}
@@ -42,7 +41,7 @@
 	<script type="text/javascript" src="https://cdn.datatables.net/staterestore/1.0.1/js/dataTables.stateRestore.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/staterestore/1.0.1/js/stateRestore.bootstrap5.js"></script>
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
 
 	{* <script type="text/javascript" src="https://networx-static.s3.eu-central-1.amazonaws.com/tinymce-4.9.11/tinymce.min.js"></script> *}
 

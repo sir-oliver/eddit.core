@@ -1,0 +1,24 @@
+.scrollable {
+	overflow-x:hidden;
+	overflow-y:scroll;
+	-ms-overflow-style: none; /* IE 11 */
+	scrollbar-width: none; /* Firefox 64 */
+}
+.scrollable::-webkit-scrollbar {
+	width: 8px;
+	display: none;
+}
+.scrollhost::-moz-scrollbar { /* Firefox */
+	display: none;	
+}
+.scrollable::-webkit-scrollbar-thumb {
+	background-color: #fff;
+	background-size: 8px 8px;
+	background-image: linear-gradient(45deg, rgba(100, 100, 100, 0.05) 25%, transparent 25%, transparent 50%, rgba(100, 100, 100, 0.05) 50%, rgba(100, 100, 100, 0.05) 75%, transparent 75%, transparent);		
+	border: 1px dotted #777;
+	border-right: 0;
+	border-radius: 4px;
+}
+#lists .scrollable::-webkit-scrollbar-thumb {
+	background-color: #e0e0e0;
+}
