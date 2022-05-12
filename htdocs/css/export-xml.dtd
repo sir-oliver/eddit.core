@@ -1,0 +1,21 @@
+<!ELEMENT edditPage	(object)*>
+
+<!ELEMENT object ANY>
+
+<!ATTLIST object id CDATA "yes">
+<!ATTLIST object type CDATA "yes">
+<!ATTLIST object title CDATA "yes">
+<!ATTLIST object tableID CDATA "yes">
+
+<!ELEMENT windowtitle ANY>
+<!ELEMENT metadescription ANY>
+<!ELEMENT title ANY>
+<!ELEMENT navname ANY>
+<!ELEMENT navtext ANY>
+<!ELEMENT url ANY>
+<!ELEMENT headline ANY>
+<!ELEMENT text ANY>
+<!ELEMENT alttext ANY>
+<!ELEMENT linktext ANY>
+<!ELEMENT placeholdertext ANY>
+<!ELEMENT buttontext ANY>

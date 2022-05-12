@@ -1,0 +1,1 @@
+<!-- Smarty template [{$object->attr('file')}] not found == error.template-not-found.tpl -->
