@@ -123,7 +123,8 @@ $(document).ready( function () {
 					"orderable": true,
 					"render": function ( data, type, row )	// bild
 					{
-						var filename = '<div>'+row[1]+' '+'<span class="i">'+row[2]+' kB</span></div>';
+						// var filename = '<div>'+row[1]+' '+'<span class="i">'+row[2]+' kB</span></div>';
+						var filename = '<div>'+row[1]+'</div>';
 						if (data.match(/svg$/))
 							return '<div class="draggable" data-file="'+data+'" data-size="'+row[2]+'" data-date="'+row[3]+" "+row[4]+'">'+filename+'<img src="/assets/'+data+'" style="max-width:60px"></div>'; // +' ('+ row[1]+')';
 						else if (data.match(/gif|jp?g|png$/i))
