@@ -1,4 +1,4 @@
-.select2-container--erema {
+.select2-container--eddit {
   @import "single";
   // @import "multiple";
 
@@ -81,7 +81,7 @@
       // border-radius: 4px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: #e0e0e0;
+      background-color: $middlegrey;
     }
 
 

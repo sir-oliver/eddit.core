@@ -1,14 +1,47 @@
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+var toastTrigger = document.getElementById('liveToastBtn')
+var toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', function () {
+    var toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}
+var toastTrigger2 = document.getElementById('liveToastBtn2')
+var toastLiveExample2 = document.getElementById('liveToast2')
+if (toastTrigger2) {
+  toastTrigger2.addEventListener('click', function () {
+    var toast2 = new bootstrap.Toast(toastLiveExample2)
+
+    toast2.show()
+  })
+}
+
+
+
 var eddit_state = 
 {
 	contentWidth: 0,
-	gridSizes: '64px 250px 1px 1fr'
+	gridMain: '64px 250px 1px 1fr',
+	gridFiles: '500px 1px 1fr',
 }
 
 loadState();
 
 function resizeContent() {
 	console.log('resizeContent');
-	eddit_state.gridSizes = document.querySelector('#grid').style['grid-template-columns'];
+	eddit_state.gridMain = document.querySelector('#grid').style['grid-template-columns'];
 	eddit_state.contentWidth = $('#content').outerWidth() + 1;
 	// if ($('#lists').width() == 0)
 	// {
@@ -26,7 +59,8 @@ function loadState() {
 	{
 		console.log(_state)
 		eddit_state = _state;
-		$('#grid').css('grid-template-columns', eddit_state.gridSizes);
+		$('#grid').css('grid-template-columns', eddit_state.gridMain);
+		$('#filesGrid').css('grid-template-rows', eddit_state.gridFiles);
 		console.log( 'loadState', eddit_state);
 	}
 }
@@ -48,6 +82,16 @@ var grid = Split({ // gutters specified in options
 	columnMinSizes: { 1: 250 },
 	snapOffset: 0,
 	onDrag: resizeContent,
+	onDragEnd: saveState
+});
+var gridFiles = Split({ // gutters specified in options
+	rowGutters: [{
+		track: 1,
+		element: document.querySelector('.gutter-row-1'),
+	}],
+	rowMinSizes: { 0: 375 },
+	snapOffset: 0,
+	onDrag: () => { eddit_state.gridFiles = document.querySelector('#filesGrid').style['grid-template-rows'] },
 	onDragEnd: saveState
 })
 var debugRow = {};
@@ -219,6 +263,7 @@ $(document).ready( function () {
 			'themes':
 			{
 				'name': 'default',
+				'dots': true,
 				'responsive': true
 			},
 			"check_callback" : true

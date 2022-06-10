@@ -3,7 +3,7 @@
 		display: block;
 		position: relative;
 		cursor: pointer;
-		color: #999999;
+		color: $middlegrey;
 		padding: 0.7rem 0;
 		text-align: center;
 		text-decoration: none;
@@ -11,8 +11,8 @@
 		transition: opacity 0.3s;
 	}
 	.nav a.active {
-		color: #333;
-		background-color: #e0e0e0;
+		color: shade-color($darkgrey, 30%);
+		background-color: $middlegrey;
 	}
 	.nav a.active::before {
 		position: absolute;
@@ -22,7 +22,7 @@
 		height: 1rem;
 		content: "";
 		border-bottom-right-radius: 1rem;
-		box-shadow: 4px 4px 0px 4px #e0e0e0;
+		box-shadow: 4px 4px 0px 4px $middlegrey;
 		transition: none;
 	}
 	.nav a.active::after {
@@ -33,7 +33,7 @@
 		height: 1rem;
 		content: "";
 		border-top-right-radius: 1rem;
-		box-shadow: 4px -4px 0px 4px #e0e0e0;
+		box-shadow: 4px -4px 0px 4px $middlegrey;
 		transition: none;
 	}
 	a.disabled {
@@ -61,8 +61,8 @@
 	
 	:not(.nav) a.active .icn i,
 	a:hover .icn i {
-		color: #333;
-		background-color: #e0e0e0;
+		// color: $darkgrey;
+		background-color: rgba($middlegrey,0.2);
 	}
 
 	a .txt {
@@ -81,7 +81,7 @@
 
 
 	.eddit-logo {
-		color: #777;
+		color: $middlegrey;
 		position: fixed;
 		margin-left: 8px;
 		-webkit-transform-origin: 0 0;

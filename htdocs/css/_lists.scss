@@ -2,23 +2,57 @@
 	.dataTable,
 	.jstree {
 		font-size: 0.8rem;
+		&.jstree-default .jstree-clicked {
+			color: white;
+			background: $primary;
+		}
 	}
 	.toolbar {
-		border-bottom: 1px dotted #797978;
+		padding: $toolbar-padding 0;
+		background-color: $toolbar-bg;
+		border-bottom: 1px $border-style $border-color;
 		* {
-			color: #666;
-			border-color: #e0e0e0;
-			background-color: #e0e0e0;
+			color: $body-color;
+			border-color: $toolbar-bg;
+			background-color: $toolbar-bg;
+		}
+		::placeholder {
+			color: $body-color;
+		}
+		&.outset {
+			--bs-gutter-x: 1.5rem;
+			--bs-gutter-y: 0;
+			margin-right: calc(-.5 * var(--bs-gutter-x));
+			margin-left: calc(-.5 * var(--bs-gutter-x));
+			padding-left: calc(.5 * var(--bs-gutter-x));
+			padding-right: calc(.5 * var(--bs-gutter-x));
 		}
 	} 
 	.pathbar {
-		border-bottom: 1px dotted #797978;
-		background-color: #e0e0e0;
-		padding: .25rem .5rem;
+		border-bottom: 1px $border-style $border-color;
+		border-left: $input-border-width solid transparent;
+		border-right: $input-border-width solid transparent;
+		background-color: $middlegrey;
+		padding: $toolbar-padding .75rem;
 		font-size: 0.875rem;
+
+		&.outset {
+			--bs-gutter-x: 1.5rem;
+			--bs-gutter-y: 0;
+			margin-right: calc(-.5 * var(--bs-gutter-x));
+			margin-left: calc(-.5 * var(--bs-gutter-x));
+			padding-left: calc(.5 * var(--bs-gutter-x));
+			padding-right: calc(.5 * var(--bs-gutter-x));
+			border-left: none;
+			border-right: none;
+	
+		}
 	}
 
 	table.dataTable {
+		td {
+			border: none;
+		}
 		td:first-child, 
 		th:first-child {
 			padding-left: .6rem;

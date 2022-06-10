@@ -1,4 +1,8 @@
-/*! split-grid - v1.0.11 */
+/*! 
+split-grid - v1.0.11 
+https://stackleap.io/js/split-grid
+https://github.com/nathancahill/split/tree/master/packages/split-grid
+*/
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :

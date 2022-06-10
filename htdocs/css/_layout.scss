@@ -1,10 +1,14 @@
 #nav {
-	background-color: #333;
+	background-color: $darkgrey;
 	overflow:hidden;
 }
 #lists {
-	background-color: #e0e0e0;
+	background-color: $middlegrey;
 	overflow:hidden;
+
+	#files.show {
+		// display: grid;
+	}
 }
 #content {
 	background-color: #ffffff;

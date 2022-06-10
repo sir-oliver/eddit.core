@@ -9,7 +9,7 @@
 }
 #grid .gutter-col {
 	cursor: col-resize;
-	border-right: 1px dotted #797978;
+	border-right: 1px $border-style $border-color;
 	display: flex;
 	align-items: center;
 	z-index: 1048;
@@ -18,11 +18,11 @@
 	position: absolute;
 	border-top-right-radius: 0.4rem;
 	border-bottom-right-radius: 0.4rem;
-	border: 1px dotted #797978;
-	border-left-color: #e0e0e0;
+	border: 1px $border-style $border-color;
+	border-left-color: $middlegrey;
 	width: .6rem;
 	height: 4rem;
-	background-color: #e0e0e0;
+	background-color: $middlegrey;
 }
 #grid .gutter-col .handle::after {
 	position: absolute;
@@ -32,9 +32,38 @@
 	width: 4px;
 	height: 3.8rem;
 	background-size: 8px 8px;
-	background-image: linear-gradient(45deg, rgba(100, 100, 100, 0.15) 25%, transparent 25%, transparent 50%, rgba(100, 100, 100, 0.15) 50%, rgba(100, 100, 100, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba($border-color, 0.75) 25%, transparent 25%, transparent 50%, rgba($border-color, 0.75) 50%, rgba($border-color, 0.75) 75%, transparent 75%, transparent);
 }
 
 #grid.hide-lists {
 	grid-template-columns: 64px 0px 1px 1fr !important;
+}
+
+
+#grid .gutter-row {
+	cursor: row-resize;
+	border-bottom: 1px $border-style $border-color;
+	display: flex;
+	justify-content: center;
+	z-index: 1048;
+}
+#grid .gutter-row .handle {
+	position: absolute;
+	margin-top: calc(-0.6rem + 1px);
+	border-top-left-radius: 0.4rem;
+	border-top-right-radius: 0.4rem;
+	border: 1px $border-style $border-color;
+	border-bottom-color: $toolbar-bg;
+	width: 4rem;
+	height: .6rem;
+	background-color: $toolbar-bg;
+}
+#grid .gutter-row .handle::after {
+	position: absolute;
+	left: 0.2rem;
+	content: "";
+	height: 4px;
+	width: 3.6rem;
+	background-size: 8px 8px;
+	background-image: linear-gradient(45deg, rgba($toolbar-color, 0.75) 25%, transparent 25%, transparent 50%, rgba($toolbar-color, 0.75) 50%, rgba($toolbar-color, 0.75) 75%, transparent 75%, transparent);
 }

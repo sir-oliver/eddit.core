@@ -4,31 +4,59 @@
 		font-size: 0.8rem;
 	}
 	.toolbar {
-		border-bottom: 1px dotted #797978;
-		background-color: #e0e0e0;
-		padding: 0 1rem;
-		font-size: 0.875rem;
+		border-bottom: 1px $border-style $border-color;
+		background-color: $toolbar-bg;
+		padding: $toolbar-padding 1rem;
+		// font-size: 0.875rem;
+
+		::placeholder {
+			color: $body-color;
+		}
+
+		/*
+			overrides for datables small form fields in the toolbar
+		*/
+		.form-control-sm {
+			padding: $input-padding-y $input-padding-x;
+			min-height: unset;
+			font-size: unset;
+			@include border-radius($input-border-radius, 0);
+		}
+		.form-select-sm {
+			padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
+			font-size: unset;
+			@include border-radius($input-border-radius, 0);
+		}
 	} 
 	.toolbar-bottom {
-		border-top: 1px dotted #797978;
-		background-color: #e0e0e0;
-		padding: 0 1rem;
+		border-top: 1px $border-style $border-color;
+		background-color: $toolbar-bg;
+		// padding: 0 1rem;
+		padding: $toolbar-padding 1rem;
 		font-size: .875rem;
 		line-height: .875rem;
 	} 
 	.toolbar * {
-		color: #666;
-		border-color: #e0e0e0;
-		background-color: #e0e0e0;
+		color: $body-color;
+		border-color: $toolbar-bg;
+		background-color: $toolbar-bg;
 	}
 	.toolbar-bottom * {
-		color: #666;
-		border-color: #e0e0e0;
-		background-color: #e0e0e0;
+		color: $body-color;
+		border-color: $toolbar-bg;
+		background-color: $toolbar-bg;
 	}
-	table.dataTable td:first-child, 
-	table.dataTable th:first-child {
-		padding-left: 1rem;
+	table.dataTable {
+		tbody {
+			cursor: context-menu;
+		}
+		td {
+			border: none;
+		}
+		td:first-child, 
+		th:first-child {
+			padding-left: 1rem;
+		}
 	}
 
 	.dataTables_info {
