@@ -6350,8 +6350,8 @@ fieldset:disabled .btn {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0 0;
-  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0;
   list-style: none;
 }
 
@@ -6363,7 +6363,7 @@ fieldset:disabled .btn {
   float: left;
   padding-right: 0.5rem;
   color: #6c757d;
-  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+  content: var(--bs-breadcrumb-divider, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E")) /* rtl: var(--bs-breadcrumb-divider, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E")) */;
 }
 
 .breadcrumb-item.active {
@@ -17926,6 +17926,7 @@ fieldset:disabled .btn {
   text-align: center;
   text-decoration: none;
   width: 64px;
+  opacity: 0.3;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -17933,6 +17934,7 @@ fieldset:disabled .btn {
 #nav .nav a.active {
   color: #474747;
   background-color: #eee;
+  opacity: 1;
 }
 
 #nav .nav a.active::before {
@@ -18001,6 +18003,10 @@ fieldset:disabled .btn {
 
 #nav a .txt-visible,
 #nav a.active .txt,
+#nav:hover a {
+  opacity: 1;
+}
+
 #nav:hover a .txt {
   opacity: 1;
 }
@@ -18010,13 +18016,20 @@ fieldset:disabled .btn {
   position: fixed;
   margin-left: 8px;
   -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform: rotate(-90deg) translate(-50%, 50%);
-  transform: rotate(-90deg) translate(-50%, 50%);
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg) translate(-50%, 50%) translateY(-50px);
+          transform: rotate(-90deg) translate(-50%, 50%) translateY(-50px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #nav .eddit-logo span {
   font-size: 0.6rem;
+}
+
+#nav:hover .eddit-logo {
+  -webkit-transform: rotate(-90deg) translate(-50%, 50%) translateY(0);
+          transform: rotate(-90deg) translate(-50%, 50%) translateY(0);
 }
 
 @media (max-height: 880px) {
@@ -18091,6 +18104,10 @@ fieldset:disabled .btn {
   padding-right: calc(.5 * var(--bs-gutter-x));
   border-left: none;
   border-right: none;
+}
+
+#lists .pathbar .breadcrumb-item + .breadcrumb-item::before {
+  float: none;
 }
 
 #lists table.dataTable td {

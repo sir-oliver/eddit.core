@@ -47,6 +47,10 @@
 			border-right: none;
 	
 		}
+
+		.breadcrumb-item + .breadcrumb-item::before {
+			float: none;
+		}
 	}
 
 	table.dataTable {

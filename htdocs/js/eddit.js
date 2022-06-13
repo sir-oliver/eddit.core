@@ -4,10 +4,16 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 })
 
 
+// var tooltipNavList = [].slice.call(document.querySelectorAll('#nav a'))
+// var tooltipNav = tooltipNavList.map(function (tooltipTriggerEl) {
+//   return new bootstrap.Tooltip(tooltipTriggerEl,{placement: 'right'})
+// })
+
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+
 
 var toastTrigger = document.getElementById('liveToastBtn')
 var toastLiveExample = document.getElementById('liveToast')

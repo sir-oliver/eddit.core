@@ -8,11 +8,13 @@
 		text-align: center;
 		text-decoration: none;
 		width: 64px;
+		opacity: 0.3;
 		transition: opacity 0.3s;
 	}
 	.nav a.active {
 		color: shade-color($darkgrey, 30%);
 		background-color: $middlegrey;
+		opacity: 1;
 	}
 	.nav a.active::before {
 		position: absolute;
@@ -74,32 +76,31 @@
 	a .txt-visible,
 	a.active .txt,
 
+	&:hover a {
+		opacity: 1;
+	}
 	&:hover a .txt {
 		opacity: 1;
 	}
-
-
 
 	.eddit-logo {
 		color: $middlegrey;
 		position: fixed;
 		margin-left: 8px;
-		-webkit-transform-origin: 0 0;
-		-moz-transform-origin: 0 0;
-			-ms-transform-origin: 0 0;
-			-o-transform-origin: 0 0;
-				transform-origin: 0 0;
-		-webkit-transform: rotate(-90deg) translate(-50%, 50%);
-		-moz-transform: rotate(-90deg) translate(-50%, 50%);
-			-ms-transform: rotate(-90deg) translate(-50%, 50%);
-			-o-transform: rotate(-90deg) translate(-50%, 50%);
-				transform: rotate(-90deg) translate(-50%, 50%);
-		
+		transform-origin: 0 0;
+		transform: rotate(-90deg) translate(-50%, 50%) translateY(-50px);
+		// opacity: 0.3;
+		transition: all 0.3s;
+
 	}
 	.eddit-logo span {
 		font-size: 0.6rem
 	}
 
+	&:hover .eddit-logo {
+		transform: rotate(-90deg) translate(-50%, 50%) translateY(0);
+		// opacity: 1;
+	}
 }
 @media (max-height: 880px) {
 	#nav .eddit-logo {

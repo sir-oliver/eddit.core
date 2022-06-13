@@ -45,6 +45,7 @@
 
 	<script type="text/javascript" src="/prototype/i18n.js"></script>
 	<script type="text/javascript" src="/eddit/js/split-grid.js"></script>
+	<script type="text/javascript" src="/eddit/js/eddit.js?t={$smarty.now}" defer></script>
 
 </head>
 <body class="">
@@ -52,38 +53,38 @@
 	<div id="nav">
 		<div class="d-flex flex-column h-100">
 
-				<a class="" href="" title="Home">
+				<a class="" href="">
 					<div class="icn">
 						{assign var='user' value=EDDIT::user('clickedit')}<img src="{EDDIT::getGravatar($user.email)}" alt="{$user.email}" alt="{$user.firstname} {$user.lastname}" style="width:40px;height:40px;border-radius: 50%">
 					</div>
 					<span class="txt txt-visible">{$user.firstname|upper} {$user.lastname|upper}</span>
 				</a>
 				<div class="nav">
-					<a class="" href="#languages" data-target="languages" data-bs-toggle="tab" title="Sprache">
+					<a class="" href="#languages" data-target="languages" data-bs-toggle="tab">
 						<span class="icn"><img src="https://flagcdn.com/at.svg" width="24" alt="AT"></span>
 						<span class="txt">SPRACHE</span>
 					</a>
-					<a class="active" href="#pages" data-target="pages" data-bs-toggle="tab" title="Seiten">
+					<a class="active" href="#pages" data-target="pages" data-bs-toggle="tab">
 						<span class="icn"><i class="fas fa-sitemap"></i></span>
 						<span class="txt">SITEMAP</span>
 					</a>
-					<a class="" href="#objects" data-target="objects" data-bs-toggle="tab" title="Seiteninhalt">
+					<a class="" href="#objects" data-target="objects" data-bs-toggle="tab">
 						<span class="icn"><i class="far fa-file-alt"></i></span>
 						<span class="txt">INHALT</span>
 					</a>
-					<a class="" href="#files" data-target="files" data-bs-toggle="tab" title="Dateien">
+					<a class="" href="#files" data-target="files" data-bs-toggle="tab">
 						<span class="icn"><i class="far fa-images"></i></span>
 						<span class="txt">DATEIEN</span>
 					</a>
-					<a class="" href="#publish" data-target="publish" data-bs-toggle="tab" title="Publish">
+					<a class="" href="#publish" data-target="publish" data-bs-toggle="tab">
 						<span class="icn"><i class="fas fa-bolt"></i></span>
 						<span class="txt">PUBLISH</span>
 					</a>
-					<a class="" href="#linkcheck" data-target="linkcheck" data-bs-toggle="tab" title="Link Checker">
+					<a class="" href="#linkcheck" data-target="linkcheck" data-bs-toggle="tab">
 						<span class="icn"><i class="fas fa-code"></i></span>
 						<span class="txt">CHECK <br>LINKS</span>
 					</a>
-					<a class="" href="#settings" data-target="settings" data-bs-toggle="tab" title="Settings">
+					<a class="" href="#settings" data-target="settings" data-bs-toggle="tab">
 						<span class="icn"><i class="fas fa-cog"></i></span>
 						<span class="txt">SETTINGS</span>
 					</a>
@@ -91,7 +92,7 @@
 				<div class="mt-auto mb-auto">
 					<div class="eddit-logo"><b>eddit.online</b><span> © busta.digital</span></div>
 				</div>
-				<a class="" href="" title="Logout">
+				<a class="" href="">
 					<span class="icn"><i class="fas fa-sign-out-alt"></i></span>
 					<span class="txt">LOGOUT</span>
 				</a>
@@ -127,7 +128,13 @@
 							<button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-copy"></i></button>
 						</div>
 					</div>
-					<div class="pathbar"><i class="fa-solid fa-copy"></i> Home > Unser Angebot > Speisen</div>
+					<nav class="pathbar">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><i class="fa-solid fa-map-pin me-0-5"></i> Home</li>
+							<li class="breadcrumb-item">Unser Angebot</li>
+							<li class="breadcrumb-item">Speisen</li>
+						</ol>
+					</nav>
 					<div class="scrollable flex-grow-1">
 						<div class="jstree-default"><div class="jstree-node ms-0" style="min-height: 10px"></div></div>
 						<div id="objectTree"></div>
@@ -208,7 +215,13 @@
 					<div class="mt-1">
 						<h3>PUBLISH</h3>
 					</div>
-					<div class="pathbar outset mb-1"><i class="fa-solid fa-map-pin"></i> Home > Unser Angebot > Speisen</div>
+					<nav class="pathbar outset mb-1">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><i class="fa-solid fa-map-pin me-0-5"></i> Home</li>
+							<li class="breadcrumb-item">Unser Angebot</li>
+							<li class="breadcrumb-item">Speisen</li>
+						</ol>
+					</nav>
 					<div class="scrollable d-flex flex-column justify-content-start flex-grow-1">
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias sit non exercitationem beatae consequatur unde rerum velit sequi impedit. Ad, at repellat veritatis esse beatae dolores qui officia eum accusantium!</p>
 
@@ -222,7 +235,13 @@
 					<div class="mt-1">
 						<h3>LINK CHECK</h3>
 					</div>
-					<div class="pathbar outset mb-1"><i class="fa-solid fa-map-pin"></i> Home > Unser Angebot > Speisen</div>
+					<nav class="pathbar outset mb-1">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><i class="fa-solid fa-map-pin me-0-5"></i> Home</li>
+							<li class="breadcrumb-item">Unser Angebot</li>
+							<li class="breadcrumb-item">Speisen</li>
+						</ol>
+					</nav>
 					<div class="scrollable d-flex flex-column justify-content-start flex-grow-1">
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias sit non exercitationem beatae consequatur unde rerum velit sequi impedit. Ad, at repellat veritatis esse beatae dolores qui officia eum accusantium!</p>
 
@@ -413,6 +432,5 @@
 		</div>
 	</div>
 
-<script type="text/javascript" src="/eddit/js/eddit.js?t={$smarty.now}"></script>
 </body>
 </html>
