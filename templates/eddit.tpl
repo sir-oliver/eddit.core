@@ -55,7 +55,7 @@
 			<div class="icn">
 				{assign var='user' value=EDDIT::user('clickedit')}<img src="{EDDIT::getGravatar($user.email)}" alt="{$user.email}" alt="{$user.firstname} {$user.lastname}" style="width:40px;height:40px;margin-bottom:5px;border-radius: 50%">
 			</div>
-			<span class="txt txt-visible">{$user.firstname|upper} {$user.lastname|upper}</span>
+			<span class="txt txt-visible">{$user.firstname|upper}<br>{$user.lastname|upper}</span>
 		</a>
 		<a class="" href="#languages" data-target="languages" data-bs-toggle="tab">
 			<span class="icn"><img src="https://flagcdn.com/at.svg" width="24" alt="AT" style="margin-bottom:5px;"></span>
