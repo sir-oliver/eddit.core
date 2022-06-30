@@ -1,0 +1,88 @@
+#nav { 
+	a {
+		display: block;
+		position: relative;
+		cursor: pointer;
+		color: $middlegrey;
+		padding: 0.7rem 0;
+		text-align: center;
+		text-decoration: none;
+		width: 100%;
+		margin-bottom: 1rem;
+		opacity: 0.3;
+		transition: opacity 0.3s;
+
+		.icn {
+			display: block;
+			text-align: center;
+			margin: 0 auto 0.2rem auto;
+			
+			i {
+				font-size: 1.4rem;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				line-height: 40px;
+				// transition: color 1s, background-color 0.5s;
+			}
+		}
+
+		.txt {
+			font-size: 0.55rem;
+			opacity: 0;
+			line-height: 0.6rem;
+			transition: color 0.3s;
+
+			&.txt-visible {
+				opacity: 1;
+			}
+		}
+
+		&:hover,
+		&.active {
+			opacity: 1 !important;
+
+			.txt {
+				opacity: 1 !important;
+			}
+		}
+
+		&.disabled {
+			opacity: 0.4;
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+
+	}
+	
+
+
+	&:hover a {
+		opacity: 0.75;
+	}
+	&:hover a .txt {
+		opacity: 0.75;
+	}
+
+	.eddit-logo {
+		color: $middlegrey;
+		white-space: nowrap;
+		transform-origin: 50% 50%;
+		transform: rotate(-90deg);
+		opacity: 0.3;
+		transition: opacity 0.3s;
+
+		span {
+				font-size: 0.6rem
+		}
+	}
+
+	&:hover .eddit-logo {
+		opacity: 1;
+	}
+}
+@media (max-height: 880px) {
+	#nav .eddit-logo {
+		display: none;
+	}
+}

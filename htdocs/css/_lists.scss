@@ -1,8 +1,12 @@
 #lists {
 	.dataTable,
-	.jstree {
+	.jstree-default {
 		font-size: 0.8rem;
-		&.jstree-default .jstree-clicked {
+	}
+	.jstree-default {
+		padding: 0 0.35rem;
+		// &.jstree-default .jstree-clicked {
+		.jstree-clicked {
 			color: white;
 			background: $primary;
 		}

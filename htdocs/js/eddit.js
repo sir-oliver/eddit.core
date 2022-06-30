@@ -95,7 +95,7 @@ var gridFiles = Split({ // gutters specified in options
 		track: 1,
 		element: document.querySelector('.gutter-row-1'),
 	}],
-	rowMinSizes: { 0: 375 },
+	rowMinSizes: { 0: 175 },
 	snapOffset: 0,
 	onDrag: () => { eddit_state.gridFiles = document.querySelector('#filesGrid').style['grid-template-rows'] },
 	onDragEnd: saveState

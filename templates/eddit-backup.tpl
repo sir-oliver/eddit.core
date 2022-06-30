@@ -50,48 +50,53 @@
 </head>
 <body class="">
 <div id="grid" class="web">
-	<div id="nav" class="nav flex-column">
-		<a class="" href="">
-			<div class="icn">
-				{assign var='user' value=EDDIT::user('clickedit')}<img src="{EDDIT::getGravatar($user.email)}" alt="{$user.email}" alt="{$user.firstname} {$user.lastname}" style="width:40px;height:40px;margin-bottom:5px;border-radius: 50%">
+	<div id="nav">
+		<div class="d-flex flex-column h-100">
+
+				<a class="" href="">
+					<div class="icn">
+						{assign var='user' value=EDDIT::user('clickedit')}<img src="{EDDIT::getGravatar($user.email)}" alt="{$user.email}" alt="{$user.firstname} {$user.lastname}" style="width:40px;height:40px;border-radius: 50%">
+					</div>
+					<span class="txt txt-visible">{$user.firstname|upper} {$user.lastname|upper}</span>
+				</a>
+				<div class="nav">
+					<a class="" href="#languages" data-target="languages" data-bs-toggle="tab">
+						<span class="icn"><img src="https://flagcdn.com/at.svg" width="24" alt="AT"></span>
+						<span class="txt">SPRACHE</span>
+					</a>
+					<a class="active" href="#pages" data-target="pages" data-bs-toggle="tab">
+						<span class="icn"><i class="fas fa-sitemap"></i></span>
+						<span class="txt">SITEMAP</span>
+					</a>
+					<a class="" href="#objects" data-target="objects" data-bs-toggle="tab">
+						<span class="icn"><i class="far fa-file-alt"></i></span>
+						<span class="txt">INHALT</span>
+					</a>
+					<a class="" href="#files" data-target="files" data-bs-toggle="tab">
+						<span class="icn"><i class="far fa-images"></i></span>
+						<span class="txt">DATEIEN</span>
+					</a>
+					<a class="" href="#publish" data-target="publish" data-bs-toggle="tab">
+						<span class="icn"><i class="fas fa-bolt"></i></span>
+						<span class="txt">PUBLISH</span>
+					</a>
+					<a class="" href="#linkcheck" data-target="linkcheck" data-bs-toggle="tab">
+						<span class="icn"><i class="fas fa-code"></i></span>
+						<span class="txt">CHECK <br>LINKS</span>
+					</a>
+					<a class="" href="#settings" data-target="settings" data-bs-toggle="tab">
+						<span class="icn"><i class="fas fa-cog"></i></span>
+						<span class="txt">SETTINGS</span>
+					</a>
+				</div>
+				<div class="mt-auto mb-auto">
+					<div class="eddit-logo"><b>eddit.online</b><span> © busta.digital</span></div>
+				</div>
+				<a class="" href="">
+					<span class="icn"><i class="fas fa-sign-out-alt"></i></span>
+					<span class="txt">LOGOUT</span>
+				</a>
 			</div>
-			<span class="txt txt-visible">{$user.firstname|upper} {$user.lastname|upper}</span>
-		</a>
-		<a class="" href="#languages" data-target="languages" data-bs-toggle="tab">
-			<span class="icn"><img src="https://flagcdn.com/at.svg" width="24" alt="AT" style="margin-bottom:5px;"></span>
-			<span class="txt">SPRACHE</span>
-		</a>
-		<a class="active" href="#pages" data-target="pages" data-bs-toggle="tab">
-			<span class="icn"><i class="fas fa-sitemap"></i></span>
-			<span class="txt">SITEMAP</span>
-		</a>
-		<a class="" href="#objects" data-target="objects" data-bs-toggle="tab">
-			<span class="icn"><i class="far fa-file-alt"></i></span>
-			<span class="txt">INHALT</span>
-		</a>
-		<a class="" href="#files" data-target="files" data-bs-toggle="tab">
-			<span class="icn"><i class="far fa-images"></i></span>
-			<span class="txt">DATEIEN</span>
-		</a>
-		<a class="" href="#publish" data-target="publish" data-bs-toggle="tab">
-			<span class="icn"><i class="fas fa-bolt"></i></span>
-			<span class="txt">PUBLISH</span>
-		</a>
-		<a class="" href="#linkcheck" data-target="linkcheck" data-bs-toggle="tab">
-			<span class="icn"><i class="fas fa-code"></i></span>
-			<span class="txt">CHECK <br>LINKS</span>
-		</a>
-		<a class="" href="#settings" data-target="settings" data-bs-toggle="tab">
-			<span class="icn"><i class="fas fa-cog"></i></span>
-			<span class="txt">SETTINGS</span>
-		</a>
-		<div class="mt-auto mb-auto">
-			<div class="eddit-logo"><b>eddit.online</b><span> © busta.digital</span></div>
-		</div>
-		<a class="" href="#logout">
-			<span class="icn"><i class="fas fa-sign-out-alt"></i></span>
-			<span class="txt">LOGOUT</span>
-		</a>
 	</div>
 	<div class="" id="lists">
 

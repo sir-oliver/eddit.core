@@ -17799,8 +17799,8 @@ fieldset:disabled .btn {
   bottom: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 64px 250px 1px 1fr;
-      grid-template-columns: 64px 250px 1px 1fr;
+  -ms-grid-columns: 80px 250px 1px 1fr;
+      grid-template-columns: 80px 250px 1px 1fr;
 }
 
 #grid .gutter-col {
@@ -17925,57 +17925,17 @@ fieldset:disabled .btn {
   padding: 0.7rem 0;
   text-align: center;
   text-decoration: none;
-  width: 64px;
+  width: 100%;
+  margin-bottom: 1rem;
   opacity: 0.3;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-#nav .nav a.active {
-  color: #474747;
-  background-color: #eee;
-  opacity: 1;
-}
-
-#nav .nav a.active::before {
-  position: absolute;
-  top: -1rem;
-  right: 0;
-  width: 1rem;
-  height: 1rem;
-  content: "";
-  border-bottom-right-radius: 1rem;
-  -webkit-box-shadow: 4px 4px 0px 4px #eee;
-          box-shadow: 4px 4px 0px 4px #eee;
-  -webkit-transition: none;
-  transition: none;
-}
-
-#nav .nav a.active::after {
-  position: absolute;
-  bottom: -1rem;
-  right: 0;
-  width: 1rem;
-  height: 1rem;
-  content: "";
-  border-top-right-radius: 1rem;
-  -webkit-box-shadow: 4px -4px 0px 4px #eee;
-          box-shadow: 4px -4px 0px 4px #eee;
-  -webkit-transition: none;
-  transition: none;
-}
-
-#nav a.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 #nav a .icn {
   display: block;
   text-align: center;
   margin: 0 auto 0.2rem auto;
-  /* transition: 0.25s; */
 }
 
 #nav a .icn i {
@@ -17984,43 +17944,52 @@ fieldset:disabled .btn {
   height: 40px;
   border-radius: 50%;
   line-height: 40px;
-  -webkit-transition: color 1s, background-color 0.5s;
-  transition: color 1s, background-color 0.5s;
-}
-
-#nav :not(.nav) a.active .icn i,
-#nav a:hover .icn i {
-  background-color: rgba(238, 238, 238, 0.2);
 }
 
 #nav a .txt {
   font-size: 0.55rem;
   opacity: 0;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
   line-height: 0.6rem;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
-#nav a .txt-visible,
-#nav a.active .txt,
-#nav:hover a {
+#nav a .txt.txt-visible {
   opacity: 1;
+}
+
+#nav a:hover, #nav a.active {
+  opacity: 1 !important;
+}
+
+#nav a:hover .txt, #nav a.active .txt {
+  opacity: 1 !important;
+}
+
+#nav a.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+#nav:hover a {
+  opacity: 0.75;
 }
 
 #nav:hover a .txt {
-  opacity: 1;
+  opacity: 0.75;
 }
 
 #nav .eddit-logo {
   color: #eee;
-  position: fixed;
-  margin-left: 8px;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transform: rotate(-90deg) translate(-50%, 50%) translateY(-50px);
-          transform: rotate(-90deg) translate(-50%, 50%) translateY(-50px);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  white-space: nowrap;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  opacity: 0.3;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 #nav .eddit-logo span {
@@ -18028,8 +17997,7 @@ fieldset:disabled .btn {
 }
 
 #nav:hover .eddit-logo {
-  -webkit-transform: rotate(-90deg) translate(-50%, 50%) translateY(0);
-          transform: rotate(-90deg) translate(-50%, 50%) translateY(0);
+  opacity: 1;
 }
 
 @media (max-height: 880px) {
@@ -18039,12 +18007,15 @@ fieldset:disabled .btn {
 }
 
 #lists .dataTable,
-#lists .jstree {
+#lists .jstree-default {
   font-size: 0.8rem;
 }
 
-#lists .dataTable.jstree-default .jstree-clicked,
-#lists .jstree.jstree-default .jstree-clicked {
+#lists .jstree-default {
+  padding: 0 0.35rem;
+}
+
+#lists .jstree-default .jstree-clicked {
   color: white;
   background: #0d6efd;
 }
