@@ -85,9 +85,12 @@
 			<span class="icn"><i class="fas fa-cog"></i></span>
 			<span class="txt">SETTINGS</span>
 		</a>
-		<div class="mt-auto mb-auto">
+		<a class="m-auto" href="/eddit/">
+			<img src="/eddit/assets/eddit-logo.png" alt="eddit.online © busta.digital">
+		</a>
+		{* <div class="my-auto">
 			<div class="eddit-logo"><b>eddit.online</b><span> © busta.digital</span></div>
-		</div>
+		</div> *}
 		<a class="" href="#logout">
 			<span class="icn"><i class="fas fa-sign-out-alt"></i></span>
 			<span class="txt">LOGOUT</span>
